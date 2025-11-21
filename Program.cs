@@ -29,14 +29,17 @@ namespace Feladat2
                 string valasztas=Console.ReadLine();
                 switch (valasztas) {
                     case "0" : return;
-                    case "1" : Console.WriteLine("e-mailek listázása");
+                    case "1" : Console.WriteLine("e-mail címet:");
                         int sorszam = 0;
                         foreach (String e_mail in e_mailok)
                         {
                             Console.WriteLine($"{sorszam++} {e_mail}");
                         }
                         break;
-                    case "2" : Console.WriteLine("új e-mailek"); break;
+                    case "2" : Console.WriteLine("Adja meg az új e-mailcímet:");
+                        String uj = Console.ReadLine();
+                        e_mailok.Add(uj);
+                        break;
                     case "3" : Console.WriteLine("e-mailek törlése"); break;
                     case "4" : Console.WriteLine("évényesek listázása"); break;
                     default: Console.Clear(); Console.WriteLine("rossz parancs"); break;
