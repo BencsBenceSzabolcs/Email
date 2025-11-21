@@ -44,7 +44,13 @@ namespace Feladat2
                         int index = Convert.ToInt32(Console.ReadLine());
                         e_mailok.RemoveAt(index);
                         break;
-                    case "4" : Console.WriteLine("évényesek listázása"); break;
+                    case "4" : Console.WriteLine("Érvényes e-mailok listája.");
+                        foreach(string e_mail in e_mailok)
+                        {
+                            if(e_mail.Contains(".") && e_mail.Contains("@"))
+                                Console.WriteLine($"{e_mail}");
+                        }
+                        break;
                     default: Console.Clear(); Console.WriteLine("rossz parancs"); break;
                 }
                 Console.ReadKey();
