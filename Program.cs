@@ -10,6 +10,14 @@ namespace Feladat2
     {
         static void Main(string[] args)
         {
+            //adatszerkezet
+            List<string> e_mailok = new List<string>();
+            e_mailok.Add("alma1@kört.hu");
+            e_mailok.Add("alma2@asda.hu");
+            e_mailok.Add("alma3@kirk.hu");
+            e_mailok.Add("bencsb@kkszki.hu");
+            e_mailok.Add("avavavavav@aaaa.hu");
+            //menüvezérlés
             while (true)
             {
                 Console.WriteLine("0. Kilépés");
